@@ -1,0 +1,186 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AnimatedCounter from '../components/AnimatedCounter';
+import SpotlightCard from '../components/SpotlightCard';
+import BlurText from '../components/BlurText';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const stats = [
+  { value: 500, suffix: '+', label: 'Hackers' },
+  { value: 25000, prefix: '$', suffix: '', label: 'Prize Pool', format: true },
+  { value: 36, suffix: '+', label: 'Hours of Coding' },
+];
+
+export default function AboutSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, x: -60 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        descRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.2,
+          scrollTrigger: {
+            trigger: descRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0, scale: 1.1, x: 60 },
+        {
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: imageRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="about"
+      className="relative py-16 sm:py-24 lg:py-32 bg-[#0A0A0A] overflow-hidden"
+    >
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" />
+
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            {/* Left - Content */}
+            <div className="order-2 lg:order-1">
+              <h2
+                ref={headingRef}
+                className="font-display text-[clamp(32px,5vw,56px)] font-bold text-white leading-tight mb-4 sm:mb-6"
+                style={{ opacity: 0 }}
+              >
+                Forge the Future in{' '}
+                <span className="gradient-text">48 Hours</span>
+              </h2>
+              
+              <div
+                ref={descRef}
+                className="text-white/60 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10"
+                style={{ opacity: 0 }}
+              >
+                <BlurText 
+                  text="Code & Chaos is DCE's premier hackathon bringing together developers, designers, and innovators. Build projects, learn new skills, and compete for exciting prizes."
+                  stagger={0.015}
+                />
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+                {stats.map((stat) => (
+                  <SpotlightCard
+                    key={stat.label}
+                    className="p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5"
+                    spotlightColor="rgba(147, 51, 234, 0.2)"
+                  >
+                    <div className="text-center">
+                      <span className="font-display text-[clamp(20px,4vw,40px)] font-bold gradient-text block mb-1 sm:mb-2">
+                        {stat.format ? (
+                          <AnimatedCounter 
+                            end={stat.value} 
+                            prefix={stat.prefix}
+                            suffix={stat.suffix}
+                          />
+                        ) : (
+                          <AnimatedCounter 
+                            end={stat.value} 
+                            prefix={stat.prefix}
+                            suffix={stat.suffix}
+                          />
+                        )}
+                      </span>
+                      <span className="font-mono text-[10px] sm:text-xs text-white/50 tracking-widest uppercase">
+                        {stat.label}
+                      </span>
+                    </div>
+                  </SpotlightCard>
+                ))}
+              </div>
+            </div>
+
+            {/* Right - Image */}
+            <div 
+              ref={imageRef}
+              className="order-1 lg:order-2 relative"
+              style={{ opacity: 0 }}
+            >
+              <div className="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden">
+                <img
+                  src="/images/hackathon-coding.jpg"
+                  alt="Hackathon coding"
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                
+                {/* Floating badge */}
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+                  <div className="p-3 sm:p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-green-500 animate-pulse" />
+                      <span className="font-mono text-xs sm:text-sm text-white/80">
+                        Registration Open
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-20 sm:w-32 h-20 sm:h-32 bg-gradient-to-br from-purple-600/20 to-red-600/20 rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-pink-600/20 to-purple-600/20 rounded-full blur-2xl" />
+            </div>
+          </div>
+
+          {/* Decorative line */}
+          <div className="mt-12 sm:mt-16 flex justify-center">
+            <div className="w-24 sm:w-32 h-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-red-600" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
