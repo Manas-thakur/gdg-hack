@@ -21,15 +21,15 @@ export default function HeroSection() {
       tl.fromTo(
         stripesRef.current?.children || [],
         { opacity: 0, scaleY: 0 },
-        { 
-          opacity: 1, 
-          scaleY: 1, 
-          duration: 1, 
-          stagger: { 
+        {
+          opacity: 1,
+          scaleY: 1,
+          duration: 1,
+          stagger: {
             each: 0.08,
             from: 'random'
           },
-          transformOrigin: 'bottom' 
+          transformOrigin: 'bottom'
         },
         0
       );
@@ -40,13 +40,13 @@ export default function HeroSection() {
         tl.fromTo(
           chars,
           { opacity: 0, y: 80, rotateX: -90, filter: 'blur(20px)' },
-          { 
-            opacity: 1, 
-            y: 0, 
-            rotateX: 0, 
+          {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
             filter: 'blur(0px)',
-            duration: 0.8, 
-            stagger: { 
+            duration: 0.8,
+            stagger: {
               each: 0.04,
               from: 'start'
             }
@@ -76,11 +76,11 @@ export default function HeroSection() {
         tl.fromTo(
           metaRef.current.children,
           { opacity: 0, y: 30, x: -20 },
-          { 
-            opacity: 1, 
-            y: 0, 
-            x: 0, 
-            duration: 0.5, 
+          {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            duration: 0.5,
             stagger: { each: 0.1, from: 'end' }
           },
           1.3
@@ -98,9 +98,9 @@ export default function HeroSection() {
   const renderCodeText = () => {
     const text = 'CODE';
     return text.split('').map((char, i) => (
-      <span 
-        key={i} 
-        className="char inline-block transform-gpu" 
+      <span
+        key={i}
+        className="char inline-block transform-gpu"
         style={{ opacity: 0 }}
       >
         {char}
@@ -111,9 +111,9 @@ export default function HeroSection() {
   const renderChaosText = () => {
     const text = '& CHAOS';
     return text.split('').map((char, i) => (
-      <span 
-        key={i} 
-        className="char inline-block transform-gpu" 
+      <span
+        key={i}
+        className="char inline-block transform-gpu"
         style={{ opacity: 0 }}
       >
         {char === ' ' ? '\u00A0' : char}
@@ -161,10 +161,10 @@ export default function HeroSection() {
           {/* Main Title */}
           <h1
             ref={titleRef}
-            className="font-display text-[clamp(48px,12vw,160px)] font-bold leading-[0.85] tracking-[-0.03em] mb-3 sm:mb-4"
+            className="font-display text-[clamp(48px,10vw,140px)] font-bold leading-[0.9] tracking-[-0.03em] mb-3 sm:mb-4"
           >
-            <span className="outline-text block">{renderCodeText()}</span>
-            <span className="gradient-text block">{renderChaosText()}</span>
+            <span className="outline-text">{renderCodeText()}</span>
+            <span className="text-white">{renderChaosText()}</span>
           </h1>
 
           {/* Tagline with scramble effect */}
@@ -178,8 +178,8 @@ export default function HeroSection() {
 
           {/* Description with blur reveal */}
           <p className="text-white/50 text-sm sm:text-base lg:text-lg max-w-lg sm:max-w-xl mb-8 sm:mb-10 leading-relaxed">
-            <BlurText 
-              text="48 hours of innovation, collaboration, and creation. Join 500+ developers building the future." 
+            <BlurText
+              text="48 hours of innovation, collaboration, and creation. Join 500+ developers building the future."
               delay={1.5}
               stagger={0.02}
             />
@@ -187,7 +187,7 @@ export default function HeroSection() {
 
           {/* CTAs with magnetic effect */}
           <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16">
-            <MagneticButton 
+            <MagneticButton
               className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-red-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
               strength={0.4}
             >
@@ -210,7 +210,7 @@ export default function HeroSection() {
               { icon: MapPin, text: 'DCE CAMPUS', color: 'text-pink-400' },
               { icon: Clock, text: '48 HOURS', color: 'text-red-400' },
             ].map((badge, i) => (
-              <div 
+              <div
                 key={i}
                 className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg sm:rounded-xl border border-white/10 hover:border-white/20 transition-colors"
               >
