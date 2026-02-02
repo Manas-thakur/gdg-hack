@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Calendar, MapPin, Clock, ChevronDown } from 'lucide-react';
@@ -132,20 +132,9 @@ export default function HeroSection() {
       {/* Gradient Stripes Background */}
       <div
         ref={stripesRef}
-        className="absolute right-0 top-0 bottom-0 w-[35%] lg:w-[40%] flex items-end justify-end gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
+        className="absolute right-0 top-0 bottom-0 w-[100%] lg:w-[50%] flex items-end justify-end gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
       >
-        {[40, 65, 45, 80, 55, 70, 50].map((height, i) => (
-          <div
-            key={i}
-            className="stripe-animate w-2 sm:w-4 lg:w-8 rounded-t-full"
-            style={{
-              height: `${height}%`,
-              background: `linear-gradient(180deg, #9333EA 0%, #EC4899 ${40 + i * 8}%, #DC2626 100%)`,
-              opacity: 0,
-              animationDelay: `${i * 0.15}s`,
-            }}
-          />
-        ))}
+       <Image width={800} height={800} alt='Logo GDG DCE' src="/logo.png" />
       </div>
 
       {/* Subtle gradient overlay */}

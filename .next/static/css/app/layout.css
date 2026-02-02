@@ -1158,6 +1158,18 @@ body{
 .w-px{
   width: 1px;
 }
+.w-\[50\%\]{
+  width: 50%;
+}
+.w-\[90\%\]{
+  width: 90%;
+}
+.w-\[150\%\]{
+  width: 150%;
+}
+.w-\[100\%\]{
+  width: 100%;
+}
 .min-w-0{
   min-width: 0px;
 }
@@ -1909,6 +1921,9 @@ body{
 }
 .p-px{
   padding: 1px;
+}
+.p-\[1\.5px\]{
+  padding: 1.5px;
 }
 .px-1{
   padding-left: 0.25rem;
@@ -4562,6 +4577,26 @@ input:-webkit-autofill:focus {
 
   .lg\:w-\[40\%\]{
     width: 40%;
+  }
+
+  .lg\:w-\[90\%\]{
+    width: 90%;
+  }
+
+  .lg\:w-\[0\%\]{
+    width: 0%;
+  }
+
+  .lg\:w-\[70\%\]{
+    width: 70%;
+  }
+
+  .lg\:w-\[75\%\]{
+    width: 75%;
+  }
+
+  .lg\:w-\[50\%\]{
+    width: 50%;
   }
 
   .lg\:grid-cols-12{
