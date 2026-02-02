@@ -132,7 +132,7 @@ export default function HeroSection() {
       {/* Gradient Stripes Background */}
       <div
         ref={stripesRef}
-        className="absolute right-0 top-0 bottom-0 w-[100%] lg:w-[50%] flex items-end justify-end gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
+        className="absolute right-0 w-[100%] lg:w-[50%] gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
       >
        <video
   width={800}
