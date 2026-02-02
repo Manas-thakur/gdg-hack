@@ -43,7 +43,11 @@ export default function Navigation() {
       >
         <div className="w-full px-6 lg:px-12 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Image src='/logo.jpeg' height={100} width={100} alt="Code & Chaos Logo" />
+          <div className='flex'>
+            <span className='text-xl font-mono'>Code</span>
+            <p className='text-xl bg-neutral-200 text-black px-2 rounded-full'>&</p>
+            <span className='text-xl font-mono'>Chaos</span>
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
