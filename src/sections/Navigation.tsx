@@ -40,10 +40,7 @@ export default function Navigation() {
       >
         <div className="w-full px-6 lg:px-12 py-4 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex flex-col">
-            <span className="font-mono text-xs text-white/60 tracking-widest">GDG DCE</span>
-            <span className="font-mono text-[10px] text-white/40 tracking-widest">PRESENTS</span>
-          </div>
+          <img src='/logo.jpeg' height={100} width={100} />
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
