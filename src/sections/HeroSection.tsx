@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Calendar, MapPin, Clock, ChevronDown } from 'lucide-react';
@@ -132,20 +132,20 @@ export default function HeroSection() {
       {/* Gradient Stripes Background */}
       <div
         ref={stripesRef}
-        className="absolute right-0 top-0 bottom-0 w-[35%] lg:w-[40%] flex items-end justify-end gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
+        className="absolute right-0 top-0 bottom-0 w-[100%] lg:w-[50%] flex items-end justify-end gap-1 sm:gap-2 lg:gap-4 pr-4 sm:pr-8 lg:pr-16"
       >
-        {[40, 65, 45, 80, 55, 70, 50].map((height, i) => (
-          <div
-            key={i}
-            className="stripe-animate w-2 sm:w-4 lg:w-8 rounded-t-full"
-            style={{
-              height: `${height}%`,
-              background: `linear-gradient(180deg, #9333EA 0%, #EC4899 ${40 + i * 8}%, #DC2626 100%)`,
-              opacity: 0,
-              animationDelay: `${i * 0.15}s`,
-            }}
-          />
-        ))}
+       <video
+  width={800}
+  height={800}
+  src="/vid.webm"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-[800px] h-[800px] object-contain"
+>
+  Your browser does not support the video tag.
+</video>
       </div>
 
       {/* Subtle gradient overlay */}
@@ -179,9 +179,9 @@ export default function HeroSection() {
           </p>
 
           {/* Description with blur reveal */}
-          <p className="text-white/50 text-sm sm:text-base lg:text-lg max-w-lg sm:max-w-xl mb-8 sm:mb-10 leading-relaxed">
+          <p className="text-white/50 text-sm pt-8 sm:text-base lg:text-lg max-w-lg sm:max-w-xl mb-8 sm:mb-10 leading-relaxed">
             <BlurText
-              text="48 hours of innovation, collaboration, and creation. Join 500+ developers building the future."
+              text="24 hours of innovation, collaboration, and creation. Join 200+ developers building the future."
               delay={1.5}
               stagger={0.02}
             />
@@ -209,7 +209,7 @@ export default function HeroSection() {
             {[
               { icon: Calendar, text: 'FEB 20-21, 2026', color: 'text-purple-400' },
               { icon: MapPin, text: 'DCE CAMPUS', color: 'text-pink-400' },
-              { icon: Clock, text: '48 HOURS', color: 'text-red-400' },
+              { icon: Clock, text: '24 HOURS', color: 'text-red-400' },
             ].map((badge, i) => (
               <div
                 key={i}

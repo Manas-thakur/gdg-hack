@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+.next/
+.vscode/
+.github/
 
 # Build outputs
 dist/

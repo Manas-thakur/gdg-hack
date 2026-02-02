@@ -1,7 +1,6 @@
 "use client";
-
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
@@ -60,12 +59,14 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('#register')}
-              className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-red-600 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Register Now
-            </button>
+            <div className="inline-block rounded-lg bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
+  <button
+    onClick={() => scrollToSection('#register')}
+    className="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
+  >
+    Register Now
+  </button>
+</div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,12 +92,12 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <button
+            <Link href="/"
               onClick={() => scrollToSection('#register')}
               className="mt-4 px-8 py-3 bg-gradient-to-r from-purple-600 to-red-600 text-white text-lg font-medium rounded-lg"
             >
               Register Now
-            </button>
+            </Link>
           </div>
         </div>
       )}
