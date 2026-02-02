@@ -166,6 +166,7 @@ export default function HeroSection() {
             className="font-display text-[clamp(48px,10vw,140px)] font-bold leading-[0.9] tracking-[-0.03em] mb-3 sm:mb-4"
           >
             <span className="outline-text">{renderCodeText()}</span>
+            <br/>
             <span className="text-white">{renderChaosText()}</span>
           </h1>
 
@@ -203,33 +204,8 @@ export default function HeroSection() {
               Learn More
             </MagneticButton>
           </div>
-
-          {/* Meta Badges */}
-          <div ref={metaRef} className="flex flex-wrap gap-2 sm:gap-4 lg:gap-6">
-            {[
-              { icon: Calendar, text: 'FEB 20-21, 2026', color: 'text-purple-400' },
-              { icon: MapPin, text: 'DCE CAMPUS', color: 'text-pink-400' },
-              { icon: Clock, text: '24 HOURS', color: 'text-red-400' },
-            ].map((badge, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg sm:rounded-xl border border-white/10 hover:border-white/20 transition-colors"
-              >
-                <badge.icon size={14} className={`sm:w-[18px] sm:h-[18px] ${badge.color}`} />
-                <span className="font-mono text-xs sm:text-sm text-white/70">{badge.text}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown size={20} className="sm:w-6 sm:h-6 text-white/30" />
-      </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
-    </section>
+      </section>
   );
 }
