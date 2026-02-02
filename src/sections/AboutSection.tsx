@@ -8,8 +8,8 @@ import BlurText from '../components/BlurText';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Hackers' },
-  { value: 25000, prefix: '$', suffix: '', label: 'Prize Pool', format: true },
+  { value: 400, suffix: '+', label: 'Hackers' },
+  { value: 10, prefix: '+', suffix: '', label: 'Sponsors', format: true },
   { value: 36, suffix: '+', label: 'Hours of Coding' },
 ];
 
@@ -147,7 +147,7 @@ export default function AboutSection() {
               className="order-1 lg:order-2 relative"
               style={{ opacity: 0 }}
             >
-              <div className="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden">
+              <div className="relative aspect-[2/1] rounded-2xl sm:rounded-3xl overflow-hidden">
                 <img
                   src="/images/hackathon-coding.jpg"
                   alt="Hackathon coding"
