@@ -1,4 +1,7 @@
+"use client";
+
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
@@ -40,7 +43,7 @@ export default function Navigation() {
       >
         <div className="w-full px-6 lg:px-12 py-4 flex items-center justify-between">
           {/* Logo */}
-          <img src='/logo.jpeg' height={100} width={100} />
+          <Image src='/logo.jpeg' height={100} width={100} alt="Code & Chaos Logo" />
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
