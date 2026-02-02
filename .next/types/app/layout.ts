@@ -1,4 +1,4 @@
-// File: /home/menace/Dev/gdg-hack/src/app/layout.tsx
+// File: /Users/sohanrout/Documents/gdg-hack/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
