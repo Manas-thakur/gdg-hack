@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Calendar, MapPin, Clock, ArrowRight, ChevronDown } from 'lucide-react';
+import { Calendar, MapPin, Clock, ChevronDown } from 'lucide-react';
 import MagneticButton from '../components/MagneticButton';
 import TextScramble from '../components/TextScramble';
 import BlurText from '../components/BlurText';
@@ -188,11 +188,10 @@ export default function HeroSection() {
           {/* CTAs with magnetic effect */}
           <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16">
             <MagneticButton
-              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-red-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-red-600 text-white font-medium rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
               strength={0.4}
             >
               Register Now
-              <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px] group-hover:translate-x-1 transition-transform" />
             </MagneticButton>
             <MagneticButton
               className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-colors duration-300"
@@ -206,7 +205,7 @@ export default function HeroSection() {
           {/* Meta Badges */}
           <div ref={metaRef} className="flex flex-wrap gap-2 sm:gap-4 lg:gap-6">
             {[
-              { icon: Calendar, text: 'MAR 15-17, 2025', color: 'text-purple-400' },
+              { icon: Calendar, text: 'FEB 20-21, 2026', color: 'text-purple-400' },
               { icon: MapPin, text: 'DCE CAMPUS', color: 'text-pink-400' },
               { icon: Clock, text: '48 HOURS', color: 'text-red-400' },
             ].map((badge, i) => (
