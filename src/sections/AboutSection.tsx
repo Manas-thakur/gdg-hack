@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const stats = [
   { value: 400, suffix: '+', label: 'Hackers' },
   { value: 10, prefix: '+', suffix: '', label: 'Sponsors', format: true },
-  { value: 36, suffix: '+', label: 'Hours of Coding' },
+  { value: 24, suffix: '+', label: 'Hours of Coding' },
 ];
 
 export default function AboutSection() {
@@ -79,7 +79,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-16 sm:py-24 lg:py-32 bg-[#0A0A0A] overflow-hidden"
+      className="relative py-8 sm:py-24 lg:py-16 bg-black overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" />
@@ -95,7 +95,7 @@ export default function AboutSection() {
                 style={{ opacity: 0 }}
               >
                 Forge the Future in{' '}
-                <span className="gradient-text">48 Hours</span>
+                <span className="gradient-text">24 Hours</span>
               </h2>
               
               <div
@@ -149,11 +149,7 @@ export default function AboutSection() {
               style={{ opacity: 0 }}
             >
               <div className="relative aspect-[2/1] rounded-2xl sm:rounded-3xl overflow-hidden">
-                <img
-                  src="/images/hackathon-coding.jpg"
-                  alt="Hackathon coding"
-                  className="w-full h-full object-cover"
-                />
+                
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 
@@ -174,11 +170,6 @@ export default function AboutSection() {
               <div className="absolute -top-4 -right-4 w-20 sm:w-32 h-20 sm:h-32 bg-gradient-to-br from-purple-600/20 to-red-600/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-pink-600/20 to-purple-600/20 rounded-full blur-2xl" />
             </div>
-          </div>
-
-          {/* Decorative line */}
-          <div className="mt-12 sm:mt-16 flex justify-center">
-            <div className="w-24 sm:w-32 h-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-red-600" />
           </div>
         </div>
       </div>
