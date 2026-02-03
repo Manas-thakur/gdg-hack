@@ -121,14 +121,14 @@ export default function AboutSection() {
                       <span className="font-display text-[clamp(20px,4vw,40px)] font-bold block mb-1 sm:mb-2">
                         {stat.format ? (
                           <AnimatedCounter
-  className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
-  end={stat.value}
-  prefix={stat.prefix}
-  suffix={stat.suffix}
-/>
+                            className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
+                            end={stat.value}
+                            prefix={stat.prefix}
+                            suffix={stat.suffix}
+                          />
                         ) : (
                           <AnimatedCounter
-                          className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
+                            className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
                             end={stat.value}
                             prefix={stat.prefix}
                             suffix={stat.suffix}

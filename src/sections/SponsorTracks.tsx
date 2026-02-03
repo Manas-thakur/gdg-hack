@@ -11,29 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const tracks = [
   {
     icon: Globe,
-    title: 'Web & Mobile',
+    title: 'Bacternity',
     description: 'Build the next generation of web and mobile applications. From responsive websites to cross-platform apps.',
     color1: 'from-purple-600 to-purple-400',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(147, 51, 234, 0.2)',
 
     points : ["Proper Deployment", ""],
-  },
-  {
-    icon: Brain,
-    title: 'AI & ML',
-    description: 'Create intelligent solutions using artificial intelligence. Build chatbots, computer vision, or ML models.',
-    color: 'from-neutral-900 to-neutral-600',
-    gradient: 'rgba(236, 72, 153, 0.2)',
-  },
-  {
-    icon: Rocket,
-    title: 'Open Innovation',
-    description: 'No limits. Build anything that solves real problems. Hardware, IoT, blockchain - your imagination is the limit.',
-    color1: 'from-red-600 to-red-400',
-    color: 'from-neutral-900 to-neutral-600',
-    gradient: 'rgba(220, 38, 38, 0.2)',
-  },
+  }
 ];
 
 export default function SponsorTracksSection() {
