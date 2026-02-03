@@ -36,7 +36,7 @@ const tracks = [
   },
 ];
 
-export default function TracksSection() {
+export default function SponsorTracksSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -123,7 +123,7 @@ export default function TracksSection() {
     <section
       ref={sectionRef}
       id="tracks"
-      className="relative pt-16 sm:pt-24 lg:pt-16 bg-black overflow-hidden"
+      className="relative pb-16 pt-8 sm:pb-24 lg:pb-16 bg-black overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none" />
@@ -134,10 +134,10 @@ export default function TracksSection() {
           {/* Heading */}
           <h2
             ref={headingRef}
-            className="font-display text-[clamp(28px,5vw,56px)] font-bold text-white text-center mb-10 sm:mb-16"
+            className="font-display text-3xl font-bold text-white text-left mb-4 sm:mb-8"
             style={{ opacity: 0 }}
           >
-            Explore <span className="gradient-text">Tracks</span>
+            Sponsored Tracks
           </h2>
 
           {/* Cards Grid */}

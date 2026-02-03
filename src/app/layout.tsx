@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Code & Chaos - GDG DCE Hackathon",
   description: "48 hours of innovation, collaboration, and creation. Join 500+ developers building the future at Code & Chaos hackathon.",
+  icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased font-roboto">
         {children}
       </body>
     </html>

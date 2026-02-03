@@ -1,17 +1,17 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import AnimatedCounter from '../components/AnimatedCounter';
-import SpotlightCard from '../components/SpotlightCard';
-import BlurText from '../components/BlurText';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AnimatedCounter from "../components/AnimatedCounter";
+import SpotlightCard from "../components/SpotlightCard";
+import BlurText from "../components/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 400, suffix: '+', label: 'Hackers' },
-  { value: 10, prefix: '+', suffix: '', label: 'Sponsors', format: true },
-  { value: 24, suffix: '+', label: 'Hours of Coding' },
+  { value: 400, suffix: "+", label: "Hackers" },
+  { value: 10, prefix: "+", suffix: "", label: "Sponsors", format: true },
+  { value: 24, suffix: "+", label: "Hours of Coding" },
 ];
 
 export default function AboutSection() {
@@ -29,13 +29,13 @@ export default function AboutSection() {
           opacity: 1,
           x: 0,
           duration: 1,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: headingRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -48,10 +48,10 @@ export default function AboutSection() {
           delay: 0.2,
           scrollTrigger: {
             trigger: descRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -62,13 +62,13 @@ export default function AboutSection() {
           scale: 1,
           x: 0,
           duration: 1.2,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: imageRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -79,7 +79,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-8 sm:py-24 lg:py-16 bg-black overflow-hidden"
+      className="relative py-8 sm:py-2 lg:py-8 bg-black overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" />
@@ -94,16 +94,16 @@ export default function AboutSection() {
                 className="font-display text-[clamp(32px,5vw,56px)] font-bold text-white leading-tight mb-4 sm:mb-6"
                 style={{ opacity: 0 }}
               >
-                Forge the Future in{' '}
+                Forge the Future in{" "}
                 <span className="gradient-text">24 Hours</span>
               </h2>
-              
+
               <div
                 ref={descRef}
                 className="text-white/60 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10"
                 style={{ opacity: 0 }}
               >
-                <BlurText 
+                <BlurText
                   text="Code & Chaos is DCE's premier hackathon bringing together developers, designers, and innovators. Build projects, learn new skills, and compete for exciting prizes."
                   stagger={0.015}
                 />
@@ -120,14 +120,14 @@ export default function AboutSection() {
                     <div className="text-center">
                       <span className="font-display text-[clamp(20px,4vw,40px)] font-bold gradient-text block mb-1 sm:mb-2">
                         {stat.format ? (
-                          <AnimatedCounter 
-                            end={stat.value} 
+                          <AnimatedCounter
+                            end={stat.value}
                             prefix={stat.prefix}
                             suffix={stat.suffix}
                           />
                         ) : (
-                          <AnimatedCounter 
-                            end={stat.value} 
+                          <AnimatedCounter
+                            end={stat.value}
                             prefix={stat.prefix}
                             suffix={stat.suffix}
                           />
@@ -143,27 +143,21 @@ export default function AboutSection() {
             </div>
 
             {/* Right - Image */}
-            <div 
+            <div
               ref={imageRef}
               className="order-1 lg:order-2 relative"
               style={{ opacity: 0 }}
             >
-              <div className="relative aspect-[2/1] rounded-2xl sm:rounded-3xl overflow-hidden">
-                
+              <div className="relative aspect-[9/8] rounded-2xl sm:rounded-3xl overflow-hidden">
+                <div style={{ width: "620px", height: "620px" }}>
+                  <iframe
+                    src="https://lottie.host/embed/0f5c67aa-6d0d-4cc0-be91-b32708d5c3f3/FKphDnD7x8.lottie"
+                    className="w-full h-full border-none"
+                  />
+                </div>
+
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Floating badge */}
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                  <div className="p-3 sm:p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10">
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-green-500 animate-pulse" />
-                      <span className="font-mono text-xs sm:text-sm text-white/80">
-                        Registration Open
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Decorative elements */}
