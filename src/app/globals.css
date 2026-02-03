@@ -40,7 +40,6 @@
   
   body {
     @apply bg-black text-white antialiased;
-    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
   }
 }

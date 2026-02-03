@@ -118,15 +118,17 @@ export default function AboutSection() {
                     spotlightColor="rgba(147, 51, 234, 0.2)"
                   >
                     <div className="text-center">
-                      <span className="font-display text-[clamp(20px,4vw,40px)] font-bold gradient-text block mb-1 sm:mb-2">
+                      <span className="font-display text-[clamp(20px,4vw,40px)] font-bold block mb-1 sm:mb-2">
                         {stat.format ? (
                           <AnimatedCounter
-                            end={stat.value}
-                            prefix={stat.prefix}
-                            suffix={stat.suffix}
-                          />
+  className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
+  end={stat.value}
+  prefix={stat.prefix}
+  suffix={stat.suffix}
+/>
                         ) : (
                           <AnimatedCounter
+                          className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-200"
                             end={stat.value}
                             prefix={stat.prefix}
                             suffix={stat.suffix}
@@ -155,14 +157,7 @@ export default function AboutSection() {
                     className="w-full h-full border-none"
                   />
                 </div>
-
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 sm:w-32 h-20 sm:h-32 bg-gradient-to-br from-purple-600/20 to-red-600/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-pink-600/20 to-purple-600/20 rounded-full blur-2xl" />
             </div>
           </div>
         </div>

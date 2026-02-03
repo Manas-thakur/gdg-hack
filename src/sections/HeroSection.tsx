@@ -152,7 +152,7 @@ export default function HeroSection() {
 
         {/* Content */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-20 sm:pt-24 pb-12 sm:pb-16">
-          <div className="max-w-4xl xl:max-w-5xl">
+          <div className="max-w-4xl xl:max-w-5xl pl-12">
             {/* Presenter */}
             <div className="mb-4 sm:mb-6">
               <span className="font-mono text-xs sm:text-sm text-white/50 tracking-widest">
@@ -200,14 +200,16 @@ export default function HeroSection() {
               ref={ctaRef}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16"
             >
-              <MagneticButton
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-red-600 text-white font-medium rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
+                <MagneticButton
+                className="group font-display px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
                 strength={0.4}
               >
                 Register Now
               </MagneticButton>
+              </div>
               <MagneticButton
-                className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-colors duration-300"
+                className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white font-display rounded-xl hover:bg-white/5 transition-colors duration-300"
                 strength={0.2}
                 onClick={scrollToAbout}
               >
