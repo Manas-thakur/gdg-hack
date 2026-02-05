@@ -109,16 +109,6 @@
   }
 }
 
-/* Animated gradient stripes */
-@keyframes stripe-shimmer {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-.stripe-animate {
-  animation: stripe-shimmer 4s ease-in-out infinite;
-}
-
 /* Floating animation */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -152,15 +142,6 @@
 
 ::-webkit-scrollbar-track {
   background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #9333EA, #DC2626);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #A855F7, #EF4444);
 }
 
 /* Card hover lift */

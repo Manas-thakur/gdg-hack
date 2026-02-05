@@ -10,7 +10,7 @@ import ScheduleSection from '@/sections/ScheduleSection';
 import PrizesSection from '@/sections/PrizesSection';
 import SponsorsSection from '@/sections/SponsorsSection';
 import FAQSection from '@/sections/FAQSection';
-import RegisterSection from '@/sections/RegisterSection';
+import RegisterSection from '@/sections/FooterSection';
 import ParticleBackground from '@/components/ParticleBackground';
 import SponsorTracksSection from '@/sections/SponsorTracks';
 

@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -90,7 +89,7 @@ export default function FAQSection() {
     <section
       ref={sectionRef}
       id="faq"
-      className="relative py-16 sm:py-24 lg:py-32 bg-black overflow-hidden"
+      className="relative py-8 sm:py-12 lg:py-12 bg-black overflow-hidden"
     >
       {/* Background */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
