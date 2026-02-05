@@ -97,7 +97,7 @@ export default function SponsorsSection() {
             ref={sponsorsRef}
             className="relative overflow-hidden"
           >
-            <div className="carousel-track flex gap-12 sm:gap-10 w-max">
+            <div className="carousel-track flex gap-20 sm:gap-24 lg:gap-28 w-max">
               {[...sponsors, ...sponsors].map((s, idx) => (
                 <SponsorLogo
                   key={`${s.name}-${idx}`}

@@ -9,7 +9,7 @@ const data = [
       <div>
           <h1 className='text-4xl font-display font-semibold'>Online Round</h1>
           <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
-            We will shortlist the Top 50 Teams (200 students) to come to the college based on the creativity, technical feasibility, and business potential of their submitted ideas.
+            We will shortlist the Top 50 Teams (200 students)
           </p>
         </div>
     )
@@ -34,7 +34,6 @@ const data = [
           <h1 className='text-4xl font-display font-semibold'>First Elimination</h1>
           <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
             Every team must pitch their "Product Plan + Tech Prototype" to our jury.
-            The bottom 35 teams will be eliminated and will leave the campus on Friday evening.
           </p>
         </div>
     )

@@ -204,7 +204,7 @@ export default function HeroSection() {
               <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
                 <MagneticButton
                   className="group font-display px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-                  strength={0.4}
+                  strength={0.0}
                 >
                   <Link className="" href="https://code-and-chaos.devfolio.co/">
                     Register Now
@@ -213,8 +213,8 @@ export default function HeroSection() {
               </div>
               <MagneticButton
                 className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white font-display rounded-xl hover:bg-white/5 transition-colors duration-300"
-                strength={0.2}
-                onClick={scrollToAbout}
+                strength={0.0}
+                onClick={() => window.open("https://code-and-chaos.devfolio.co/schedule", "_blank")}
               >
                 Learn More
               </MagneticButton>

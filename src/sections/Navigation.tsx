@@ -65,7 +65,7 @@ export default function Navigation() {
             <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
                 <MagneticButton
                 className="group font-display px-3 sm:px-4 py-1 sm:py-3 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-                strength={0.4}
+                strength={0.0}
               >
                 <Link className="text-sm" href="https://code-and-chaos.devfolio.co/">Register Now</Link>
               </MagneticButton>
