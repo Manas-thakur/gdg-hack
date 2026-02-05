@@ -200,7 +200,7 @@ export default function HeroSection() {
               {/* CTAs with magnetic effect */}
               <div
                 ref={ctaRef}
-                className="flex flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-4 sm:mb-2"
+                className="flex flex-row flex-wrap justify-left gap-3 sm:gap-4 mb-4 sm:mb-2"
               >
                 <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
                   <MagneticButton
