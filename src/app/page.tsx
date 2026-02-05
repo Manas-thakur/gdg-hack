@@ -40,12 +40,12 @@ export default function Home() {
       {/* Main Content */}
       <main className="relative z-10">
         <HeroSection />
+        <SponsorsSection />
         <AboutSection />
         <TracksSection />
         <SponsorTracksSection />
         <ScheduleSection />
-        <PrizesSection />
-        <SponsorsSection />
+        {/*<PrizesSection />*/}
         <FAQSection />
         <RegisterSection />
       </main>
