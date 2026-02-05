@@ -12,7 +12,7 @@ const tracks = [
   {
     icon: Globe,
     title: 'Bacternity',
-    description: 'Build the next generation of web and mobile applications. From responsive websites to cross-platform apps.',
+    description: 'Build your backends faster with backternity. Partcipants have to use bacternity in order build there backends',
     color1: 'from-purple-600 to-purple-400',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(147, 51, 234, 0.2)',
@@ -122,7 +122,7 @@ export default function SponsorTracksSection() {
             className="font-display text-3xl font-bold text-white text-left mb-4 sm:mb-8"
             style={{ opacity: 0 }}
           >
-            Sponsored Tracks
+            Sponsored Bounties
           </h2>
 
           {/* Cards Grid */}
