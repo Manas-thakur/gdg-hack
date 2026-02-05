@@ -152,7 +152,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-transparent pointer-events-none" />
 
         {/* Content */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-20 sm:pt-24 pb-4 sm:pb-4">
           <div className="max-w-4xl xl:max-w-5xl pl-12">
             {/* Presenter */}
             <div className="mb-4 sm:mb-6">
@@ -199,15 +199,17 @@ export default function HeroSection() {
             {/* CTAs with magnetic effect */}
             <div
               ref={ctaRef}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16"
+              className="flex flex-row flex-wrap justify-left gap-3 sm:gap-4 mb-4 sm:mb-2"
             >
               <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
                 <MagneticButton
-                className="group font-display px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-                strength={0.4}
-              >
-                <Link href="https://code-and-chaos.devfolio.co/">Register Now</Link>
-              </MagneticButton>
+                  className="group font-display px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                  strength={0.4}
+                >
+                  <Link className="" href="https://code-and-chaos.devfolio.co/">
+                    Register Now
+                  </Link>
+                </MagneticButton>
               </div>
               <MagneticButton
                 className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white font-display rounded-xl hover:bg-white/5 transition-colors duration-300"
