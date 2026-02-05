@@ -145,10 +145,10 @@ export default function FAQSection() {
           <div className="mt-8 sm:mt-12 text-center">
             <p className="text-white/40 text-sm sm:text-base mb-2 sm:mb-3">Still have questions?</p>
             <a
-              href="mailto:hello@codeandchaos.dev"
+              href="mailto:gdg.dce.25.26@gmail.com"
               className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm sm:text-base"
             >
-              Contact us at hello@codeandchaos.dev
+              Contact us at gdg.dce.25.26@gmail.com
             </a>
           </div>
         </div>
