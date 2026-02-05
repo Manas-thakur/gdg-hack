@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const sponsors = [
   { name: 'Bacternity', logo: '/sponsors/backternity.svg' },
   { name: 'GitHub', logo: '/sponsors/devfolio.png' },
+  { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png'},
+  { name: 'Paradize.space', logo: '/sponsors/paradize.png'}
 ];
 
 export default function SponsorsSection() {
