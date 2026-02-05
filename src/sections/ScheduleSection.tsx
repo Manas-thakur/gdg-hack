@@ -3,29 +3,78 @@ import { Timeline } from '@/components/ui/timeline';
 
 const data = [
   {
-    date : "DAY 1",
+    date : "FEB 15",
     time : "9:00 AM",
     content : (
       <div>
-          <h1 className='text-4xl font-display font-semibold'>Opening Ceremony</h1>
+          <h1 className='text-4xl font-display font-semibold'>Online Round</h1>
           <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
-            Kickoff, rules, and team formation
+            We will shortlist the Top 50 Teams (200 students) to come to the college based on the creativity, technical feasibility, and business potential of their submitted ideas.
           </p>
         </div>
     )
   },
   {
-    date : "DAY 1",
-    time : "11:00 AM",
+    date : "FEB 20",
+    time : "9:00 AM",
     content : (
       <div>
           <h1 className='text-4xl font-display font-semibold'>Hacking Begins</h1>
           <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
-            Start building your projects
+            All 50 teams arrive and start building their prototypes.
           </p>
         </div>
     )
-  }
+  },
+  {
+    date : "FEB 20",
+    time : "11:00 AM",
+    content : (
+      <div>
+          <h1 className='text-4xl font-display font-semibold'>First Elimination</h1>
+          <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
+            Every team must pitch their "Product Plan + Tech Prototype" to our jury.
+            The bottom 35 teams will be eliminated and will leave the campus on Friday evening.
+          </p>
+        </div>
+    )
+  },
+  {
+    date : "FEB 20",
+    time : "3:00 PM",
+    content : (
+      <div>
+          <h1 className='text-4xl font-display font-semibold'>Mentoring Sessions Starts</h1>
+          <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
+            The remaining teams will follow a Milestone-Based schedule.
+          </p>
+        </div>
+    )
+  },
+  {
+    date : "FEB 21",
+    time : "9:00 AM",
+    content : (
+      <div>
+          <h1 className='text-4xl font-display font-semibold'>JUDGEMENT</h1>
+          <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
+            Partcipants have to show there final products to our judges.
+          </p>
+        </div>
+    )
+  },
+  {
+    date : "FEB 21",
+    time : "11:00 AM",
+    content : (
+      <div>
+          <h1 className='text-4xl font-display font-semibold'>Closing Ceremony</h1>
+          <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
+            With the final judgment and winners code and chaos will be concluded.
+          </p>
+        </div>
+    )
+  },
 ]
 
 export default function ScheduleSection() {
