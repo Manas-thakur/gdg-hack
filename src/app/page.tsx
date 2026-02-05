@@ -30,16 +30,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-black min-h-screen overflow-x-hidden">
-      {/* Particle Background */}
-      <ParticleBackground />
-
-      {/* Navigation */}
-      <Navigation />
-
-      {/* Main Content */}
       <main className="relative z-10">
-        <HeroSection />
+        {/* Navigation */}
+        <Navigation />
+          <HeroSection />
         <SponsorsSection />
         <AboutSection />
         <TracksSection />
@@ -49,6 +43,5 @@ export default function Home() {
         <FAQSection />
         <RegisterSection />
       </main>
-    </div>
   );
 }
