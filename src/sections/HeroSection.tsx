@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import MagneticButton from "../components/MagneticButton";
 import TextScramble from "../components/TextScramble";
 import BlurText from "../components/BlurText";
+import Link from "next/link";
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -205,12 +206,7 @@ export default function HeroSection() {
                 className="group font-display px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
                 strength={0.4}
               >
-                <div
-  className="apply-button"
-  data-hackathon-slug="code-and-chaos"
-  data-button-theme="dark"
-  style={{ height: "44px", width: "312px" }}
-></div>
+                <Link href="https://code-and-chaos.devfolio.co/">Register Now</Link>
               </MagneticButton>
               </div>
               <MagneticButton

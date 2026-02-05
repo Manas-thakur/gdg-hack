@@ -1,14 +1,15 @@
 "use client";
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import MagneticButton from "@/components/MagneticButton";
 
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Tracks', href: '#tracks' },
-  { label: 'Schedule', href: '#schedule' },
-  { label: 'Prizes', href: '#prizes' },
-  { label: 'FAQ', href: '#faq' },
+  { label: "About", href: "#about" },
+  { label: "Tracks", href: "#tracks" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Prizes", href: "#prizes" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navigation() {
@@ -19,14 +20,14 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
@@ -36,16 +37,18 @@ export default function Navigation() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-black/90 backdrop-blur-lg border-b border-white/5'
-            : 'bg-transparent'
+            ? "bg-black/90 backdrop-blur-lg border-b border-white/5"
+            : "bg-transparent"
         }`}
       >
         <div className="w-full px-6 lg:px-12 py-4 flex items-center justify-between">
           {/* Logo */}
-          <div className='flex'>
-            <span className='text-xl font-mono'>Code</span>
-            <p className='text-xl bg-neutral-200 text-black px-2 rounded-full'>&</p>
-            <span className='text-xl font-mono'>Chaos</span>
+          <div className="flex">
+            <span className="text-xl font-mono">Code</span>
+            <p className="text-xl bg-neutral-200 text-black px-2 rounded-full">
+              &
+            </p>
+            <span className="text-xl font-mono">Chaos</span>
           </div>
 
           {/* Desktop Nav */}
@@ -59,14 +62,14 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <div className="inline-block rounded-lg bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
-  <button
-    onClick={() => scrollToSection('#register')}
-    className="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
-  >
-    Register Now
-  </button>
-</div>
+            <div className="inline-block rounded-xl bg-gradient-to-r from-purple-600 to-red-600 p-[1.5px]">
+                <MagneticButton
+                className="group font-display px-3 sm:px-4 py-1 sm:py-3 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                strength={0.4}
+              >
+                <Link className="text-sm" href="https://code-and-chaos.devfolio.co/">Register Now</Link>
+              </MagneticButton>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,8 +95,8 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <Link href="/"
-              onClick={() => scrollToSection('#register')}
+            <Link
+              href="https://code-and-chaos.devfolio.co/"
               className="mt-4 px-8 py-3 bg-gradient-to-r from-purple-600 to-red-600 text-white text-lg font-medium rounded-lg"
             >
               Register Now
