@@ -209,7 +209,7 @@ export default function HeroSection() {
                   >
                     <Link
                       className=""
-                      href="https://code-and-chaos.devfolio.co/"
+                      href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge"
                     >
                       Register Now
                     </Link>
