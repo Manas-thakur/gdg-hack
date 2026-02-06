@@ -146,7 +146,7 @@ export default function FAQSection() {
             <p className="text-white/40 text-sm sm:text-base mb-2 sm:mb-3">Still have questions?</p>
             <a
               href="mailto:gdg.dce.25.26@gmail.com"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm sm:text-base"
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors text-sm sm:text-base"
             >
               Contact us at gdg.dce.25.26@gmail.com
             </a>
