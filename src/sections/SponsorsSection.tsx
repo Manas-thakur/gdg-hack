@@ -11,6 +11,7 @@ const sponsors = [
   { name: 'Unstop', logo: '/sponsors/unstop.png' },
   { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png'},
   { name: 'Paradize.space', logo: '/sponsors/paradize.png'},
+  { name: 'Commudle', logo: '/sponsors/commudle.svg'},
   { name: 'Xyz', logo: '/sponsors/xyz.png'}
 ];
 

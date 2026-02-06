@@ -96,7 +96,7 @@ export default function Navigation() {
               </button>
             ))}
             <Link
-              href="https://code-and-chaos.devfolio.co/"
+              href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge"
               className="mt-4 px-8 py-3 bg-gradient-to-r from-purple-600 to-red-600 text-white text-lg font-medium rounded-lg"
             >
               Register Now
