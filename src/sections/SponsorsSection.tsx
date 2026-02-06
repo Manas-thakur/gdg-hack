@@ -10,7 +10,8 @@ const sponsors = [
   { name: 'Bacternity', logo: '/sponsors/backternity.svg' },
   { name: 'Unstop', logo: '/sponsors/unstop.png' },
   { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png'},
-  { name: 'Paradize.space', logo: '/sponsors/paradize.png'}
+  { name: 'Paradize.space', logo: '/sponsors/paradize.png'},
+  { name: 'Xyz', logo: '/sponsors/xyz.png'}
 ];
 
 export default function SponsorsSection() {

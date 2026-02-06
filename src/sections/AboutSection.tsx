@@ -147,7 +147,7 @@ export default function AboutSection() {
             {/* Right - Image */}
             <div
               ref={imageRef}
-              className="order-1 lg:order-2 relative"
+              className="order-1 lg:order-2 relative hidden lg:block"
               style={{ opacity: 0 }}
             >
               <div className="relative aspect-[9/8] rounded-2xl sm:rounded-3xl overflow-hidden">
