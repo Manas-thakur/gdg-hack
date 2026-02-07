@@ -182,6 +182,7 @@ export default function TracksSection() {
                 style={{ 
                   opacity: 0,
                   transformStyle: 'preserve-3d',
+                  WebkitTransformStyle: 'preserve-3d',
                 }}
                 onMouseMove={(e) => handleMouseMove(e, index)}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -193,12 +194,16 @@ export default function TracksSection() {
                   spotlightColor={track.gradient}
                 >
                   <div
-                    className={`relative h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+                    className={`relative h-full transition-transform duration-700 ${
                       flippedIndex === index ? '[transform:rotateY(180deg)]' : ''
                     }`}
+                    style={{
+                      transformStyle: 'preserve-3d',
+                      WebkitTransformStyle: 'preserve-3d',
+                    }}
                   >
                     {/* FRONT */}
-                    <div className="absolute inset-0 p-6 sm:p-8 lg:p-10 [backface-visibility:hidden]">
+                    <div className="absolute inset-0 p-6 sm:p-8 lg:p-10" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
                       <div className="relative z-10">
                         {/* Icon */}
                         <div 
@@ -229,7 +234,14 @@ export default function TracksSection() {
                     </div>
 
                     {/* BACK */}
-                    <div className="absolute inset-0 p-6 sm:p-8 lg:p-10 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+                    <div
+                      className="absolute inset-0 p-6 sm:p-8 lg:p-10 flex flex-col justify-center"
+                      style={{
+                        transform: 'rotateY(180deg)',
+                        backfaceVisibility: 'hidden',
+                        WebkitBackfaceVisibility: 'hidden',
+                      }}
+                    >
                       <h4 className="font-display text-lg sm:text-xl font-bold text-white mb-4">
                         About this Track
                       </h4>
