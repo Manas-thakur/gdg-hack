@@ -220,7 +220,7 @@ export default function HeroSection() {
                   strength={0.0}
                   onClick={() =>
                     window.open(
-                      "https://code-and-chaos.devfolio.co/schedule",
+                      "https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge",
                       "_blank",
                     )
                   }
