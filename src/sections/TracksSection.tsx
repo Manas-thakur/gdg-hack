@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Globe, Brain, Rocket, ArrowUpRight } from 'lucide-react';
+import { Globe, Brain, Rocket, Venus } from 'lucide-react';
 import SpotlightCard from '../components/SpotlightCard';
 import GlitchText from '../components/GlitchText';
 
@@ -17,7 +17,12 @@ const tracks = [
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(147, 51, 234, 0.2)',
 
-    points : ["Proper Deployment", ""],
+    points: [
+      'UI/UX quality & responsiveness',
+      'Performance & deployment readiness',
+      'Problem relevance & usefulness',
+      'Technical execution',
+    ],
   },
   {
     icon: Brain,
@@ -25,6 +30,12 @@ const tracks = [
     description: 'Create intelligent solutions using artificial intelligence. Build chatbots, computer vision, or ML models.',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(236, 72, 153, 0.2)',
+    points: [
+      'Model effectiveness & accuracy',
+      'Innovation in approach',
+      'Dataset usage & ethics',
+      'Practical application',
+    ],
   },
   {
     icon: Rocket,
@@ -33,6 +44,26 @@ const tracks = [
     color1: 'from-red-600 to-red-400',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(220, 38, 38, 0.2)',
+    points: [
+      'Originality of the idea',
+      'Impact & scalability',
+      'Technical difficulty',
+      'Feasibility within hackathon time',
+    ],
+  },
+  {
+    icon: Venus,
+    title: 'Women in Tech Innovation',
+    description: 'Projects empowering women through technology or community-driven innovation.',
+    color1: 'from-pink-600 to-rose-400',
+    color: 'from-neutral-900 to-neutral-600',
+    gradient: 'rgba(236, 72, 153, 0.25)',
+    points: [
+      'Best overall idea among teams with women members',
+      'Impact & real-world feasibility',
+      'Innovation & creativity',
+      'Presentation & execution',
+    ],
   },
 ];
 
@@ -41,6 +72,7 @@ export default function TracksSection() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [, setHoveredIndex] = useState<number | null>(null);
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -141,7 +173,7 @@ export default function TracksSection() {
           </h2>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 perspective-1000">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8" style={{ perspective: '1200px' }}>
             {tracks.map((track, index) => (
               <div
                 key={track.title}
@@ -154,36 +186,72 @@ export default function TracksSection() {
                 onMouseMove={(e) => handleMouseMove(e, index)}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
+                onClick={() => setFlippedIndex(flippedIndex === index ? null : index)}
               >
                 <SpotlightCard
-                  className="h-full p-6 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5"
+                  className="h-full min-h-[340px] rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5"
                   spotlightColor={track.gradient}
                 >
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <div 
-                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${track.color} flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-300 group-hover:scale-110`}
-                      style={{
-                        animation: `float 4s ease-in-out infinite`,
-                        animationDelay: `${index * 0.5}s`,
-                      }}
-                    >
-                      <track.icon size={24} className="text-white sm:w-7 sm:h-7" />
+                  <div
+                    className={`relative h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+                      flippedIndex === index ? '[transform:rotateY(180deg)]' : ''
+                    }`}
+                  >
+                    {/* FRONT */}
+                    <div className="absolute inset-0 p-6 sm:p-8 lg:p-10 [backface-visibility:hidden]">
+                      <div className="relative z-10">
+                        {/* Icon */}
+                        <div 
+                          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${track.color} flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-300 group-hover:scale-110`}
+                          style={{
+                            animation: `float 4s ease-in-out infinite`,
+                            animationDelay: `${index * 0.5}s`,
+                          }}
+                        >
+                          <track.icon size={24} className="text-white sm:w-7 sm:h-7" />
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4">
+                          <GlitchText text={track.title} />
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
+                          {track.description}
+                        </p>
+
+                        {/* CTA */}
+                        <div className="flex items-center gap-2 text-white/40 group-hover:text-purple-400 transition-colors">
+                          <span className="font-mono text-xs sm:text-sm">Click to learn more →</span>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Title with glitch effect */}
-                    <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4">
-                      <GlitchText text={track.title} />
-                    </h3>
+                    {/* BACK */}
+                    <div className="absolute inset-0 p-6 sm:p-8 lg:p-10 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+                      <h4 className="font-display text-lg sm:text-xl font-bold text-white mb-4">
+                        About this Track
+                      </h4>
 
-                    {/* Description */}
-                    <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
-                      {track.description}
-                    </p>
+                      <ul className="space-y-3 text-sm sm:text-base text-white/60">
+                        {(track as any).points ? (
+                          (track as any).points.map((point: string, i: number) => (
+                            <li key={i}>• {point}</li>
+                          ))
+                        ) : (
+                          <>
+                            <li>• Team size & rules</li>
+                            <li>• Judging parameters</li>
+                            <li>• Submission format</li>
+                            <li>• Prizes & perks</li>
+                          </>
+                        )}
+                      </ul>
 
-                    {/* Link */}
-                    <div className="flex items-center gap-2 text-white/40 group-hover:text-purple-400 transition-colors">
-                      <span className="font-mono text-xs sm:text-sm">Judging Criteria</span>
+                      <div className="mt-6 text-purple-400 font-mono text-xs sm:text-sm">
+                        Click again to go back
+                      </div>
                     </div>
                   </div>
                 </SpotlightCard>

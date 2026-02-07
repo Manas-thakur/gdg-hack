@@ -165,11 +165,6 @@ export default function SponsorTracksSection() {
                     <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
                       {track.description}
                     </p>
-
-                    {/* Link */}
-                    <div className="flex items-center gap-2 text-white/40 group-hover:text-purple-400 transition-colors">
-                      <span className="font-mono text-xs sm:text-sm">Judging Criteria</span>
-                    </div>
                   </div>
                 </SpotlightCard>
               </div>
