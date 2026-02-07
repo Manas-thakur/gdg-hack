@@ -10,11 +10,11 @@ gsap.registerPlugin(ScrollTrigger);
 const faqs = [
   {
     question: 'Who can participate?',
-    answer: 'Any college student with a passion for building! Whether you\'re a beginner or experienced developer, designer, or innovator - everyone is welcome.',
+    answer: 'Any college student with a passion for building! Whether you\'re a beginner or experienced developer, designer, or innovator everyone is welcome.',
   },
   {
     question: 'Do I need a team?',
-    answer: 'You can join solo or form teams of up to 4 members. Don\'t have a team? No worries! We\'ll have team formation sessions at the start of the event.',
+    answer: 'You can join in form teams of up to 4 members.',
   },
   {
     question: 'Is there a registration fee?',
