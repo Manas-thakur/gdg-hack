@@ -11,8 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
 const tracks = [
   {
     icon: Globe,
-    title: 'Bacternity',
-    description: 'Build your backends faster with backternity. Partcipants have to use bacternity in order build there backends',
+    title: 'Backternity',
+    description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
     color1: 'from-purple-600 to-purple-400',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(147, 51, 234, 0.2)',
