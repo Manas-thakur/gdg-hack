@@ -138,7 +138,7 @@ export default function HeroSection() {
             <video
               width={800}
               height={800}
-              src="/vid.webm"
+              src="https://res.cloudinary.com/dmtvg2mj4/video/upload/v1770993625/vid_j4juxn.webm"
               autoPlay
               loop
               muted
