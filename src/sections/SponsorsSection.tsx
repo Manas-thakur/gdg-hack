@@ -12,7 +12,8 @@ const sponsors = [
   { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png'},
   { name: 'Paradize.space', logo: '/sponsors/paradize.png'},
   { name: 'Commudle', logo: '/sponsors/commudle.svg'},
-  { name: 'Xyz', logo: '/sponsors/xyz.png'}
+  { name: 'Xyz', logo: '/sponsors/xyz.png'},
+  { name: "minimax", logo : "/sponsors/minimax.png"}
 ];
 
 export default function SponsorsSection() {
