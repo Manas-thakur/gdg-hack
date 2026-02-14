@@ -2,15 +2,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Globe, Workflow } from 'lucide-react';
+
 import SpotlightCard from '../components/SpotlightCard';
 import GlitchText from '../components/GlitchText';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const tracks = [
   {
-    icon: Globe,
+    icon: "/track/backternity.ico",
     title: 'Backternity',
     description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
     color1: 'from-purple-600 to-purple-400',
@@ -20,7 +21,7 @@ const tracks = [
     points : ["Proper Deployment", ""],
   },
   {
-    icon: Workflow,
+    icon: "/track/api.ico",
     title: 'API Market',
     description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
     color1: 'from-purple-600 to-purple-400',
@@ -157,13 +158,13 @@ export default function SponsorTracksSection() {
                   <div className="relative z-10">
                     {/* Icon */}
                     <div 
-                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${track.color} flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-300 group-hover:scale-110`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-300 group-hover:scale-110`}
                       style={{
                         animation: `float 4s ease-in-out infinite`,
                         animationDelay: `${index * 0.5}s`,
                       }}
                     >
-                      <track.icon size={24} className="text-white sm:w-7 sm:h-7" />
+                      <Image width={24} height={24} src={track.icon} alt='image' className="text-white sm:w-7 sm:h-7" />
                     </div>
 
                     {/* Title with glitch effect */}
