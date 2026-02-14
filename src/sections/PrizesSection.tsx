@@ -15,7 +15,7 @@ const mainPrizes = [
   {
     rank: "2nd",
     title: "Runner Up",
-    prize: "Rs 7,000",
+    prize: "Rs 5,000",
     perks: ["Cash Prize", "Swag Kits", "Goodies"],
     icon: Trophy,
     color: "from-slate-400 to-slate-600",
@@ -24,7 +24,7 @@ const mainPrizes = [
   {
     rank: "3rd",
     title: "Second Runner",
-    prize: "Rs 5,000",
+    prize: "Rs 3,000",
     perks: ["Cash Prize", "Swag Kits", "Goodies"],
     icon: Trophy,
     color: "from-orange-700 to-orange-900",
