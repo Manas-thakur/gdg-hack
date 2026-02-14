@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: 'Can I start working on my project before the event?',
-    answer: 'No, all coding and design work must start at the hackathon. You can come with ideas and plans, but the actual building happens during the event.',
+    answer: 'Yes, all coding and design work can start after ppt round. You can come with ideas and plans, but the actual building happens after the ppt round.',
   },
 ];
 
