@@ -99,7 +99,6 @@ export default function SponsorsGrid() {
               href={sponsor.href}
               target="_blank"
               rel="noopener noreferrer"
-              variants={itemVariants}
               className="group relative flex flex-col items-center"
             >
               {/* Card Container */}
