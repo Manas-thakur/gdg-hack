@@ -189,7 +189,7 @@ export default function PrizesSection() {
           className="text-center mt-12 p-6"
         >
           <p className="text-neutral-400">
-            All participants receive certificates and exclusive perks from our sponsors
+            All participants will receive certificates and exclusive perks from our sponsors
           </p>
         </motion.div>
       </div>
