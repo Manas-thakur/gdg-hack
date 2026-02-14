@@ -3,8 +3,8 @@ import { Timeline } from '@/components/ui/timeline';
 
 const data = [
   {
-    date : "FEB 15",
-    time : "9:00 AM",
+    date : "FEB 18",
+    time : "12:00 AM",
     content : (
       <div>
           <h1 className='text-4xl font-display font-semibold'>Online Round</h1>
