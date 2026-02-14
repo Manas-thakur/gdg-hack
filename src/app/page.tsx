@@ -12,6 +12,7 @@ import SponsorsSection from '@/sections/SponsorsSection';
 import FAQSection from '@/sections/FAQSection';
 import RegisterSection from '@/sections/FooterSection';
 import SponsorTracksSection from '@/sections/SponsorTracks';
+import SponsorsGrid from '@/sections/SponsorGrid';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +39,7 @@ export default function Home() {
         <TracksSection />
         <SponsorTracksSection />
         <ScheduleSection />
+        <SponsorsGrid />
         <PrizesSection />
         <FAQSection />
         <RegisterSection />
