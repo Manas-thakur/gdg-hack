@@ -43,7 +43,7 @@ const tickPrizes = [
   },
   {
     title: "Most Innovative",
-    description: "Best usage of API from api market",
+    description: "Best business ready project",
     prize: "Rs 10,000",
     icon: Zap,
     color: "from-cyan-500 to-blue-600",
