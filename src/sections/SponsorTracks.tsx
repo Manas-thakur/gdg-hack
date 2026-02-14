@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Globe, Brain, Rocket, ArrowUpRight } from 'lucide-react';
+import { Globe, Workflow } from 'lucide-react';
 import SpotlightCard from '../components/SpotlightCard';
 import GlitchText from '../components/GlitchText';
 
@@ -12,6 +12,16 @@ const tracks = [
   {
     icon: Globe,
     title: 'Backternity',
+    description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
+    color1: 'from-purple-600 to-purple-400',
+    color: 'from-neutral-900 to-neutral-600',
+    gradient: 'rgba(147, 51, 234, 0.2)',
+
+    points : ["Proper Deployment", ""],
+  },
+  {
+    icon: Workflow,
+    title: 'API Market',
     description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
     color1: 'from-purple-600 to-purple-400',
     color: 'from-neutral-900 to-neutral-600',

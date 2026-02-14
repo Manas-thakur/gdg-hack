@@ -5,14 +5,25 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const sponsors = [
-  { name: 'Bacternity', logo: '/sponsors/backternity.svg' },
-  { name: 'Unstop', logo: '/sponsors/unstop.png' },
-  { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png'},
-  { name: 'Paradize.space', logo: '/sponsors/paradize.png'},
-  { name: 'Commudle', logo: '/sponsors/commudle.svg'},
-  { name: 'Xyz', logo: '/sponsors/xyz.png'},
-  { name: "minimax", logo : "/sponsors/minimax.png"}
+type SponsorSize = 'lg' | 'md' | 'sm' | 'xs';
+
+interface Sponsor {
+  name: string;
+  logo: string;
+  size?: SponsorSize;
+}
+
+const sponsors: Sponsor[] = [
+  { name: 'Bacternity', logo: '/sponsors/backternity.svg', size: 'md' },
+  { name: 'Unstop', logo: '/sponsors/unstop.png', size: 'sm' },
+  { name: 'Dsa Visualizer', logo: '/sponsors/dsa.png', size: 'md' },
+  { name: 'Paradize.space', logo: '/sponsors/paradize.png', size: 'md' },
+  { name: 'Commudle', logo: '/sponsors/commudle.svg', size: 'sm' },
+  { name: 'Xyz', logo: '/sponsors/xyz.png', size: 'xs' },
+  { name: "minimax", logo: "/sponsors/minimax.png", size: 'xs' },
+  { name : "API Market", logo: "/sponsors/api.png", size : 'sm'},
+  { name: "Sharp Economy", logo: "/sponsors/sharp.png", size : "sm"},
+  { name : "Wingman", logo: "/sponsors/wingman.png", size : "lg"}
 ];
 
 export default function SponsorsSection() {
@@ -57,7 +68,7 @@ export default function SponsorsSection() {
     return () => ctx.revert();
   }, []);
 
-  const SponsorLogo = ({ name, logo, size = 'md' }: { name: string; logo: string; size?: 'lg' | 'md' | 'sm' | 'xs' }) => {
+  const SponsorLogo = ({ name, logo, size = 'md' }: { name: string; logo: string; size?: SponsorSize }) => {
     const sizeClasses = {
       lg: 'w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64',
       md: 'w-40 h-40 sm:w-44 sm:h-44 lg:w-48 lg:h-48',
@@ -108,13 +119,13 @@ export default function SponsorsSection() {
             <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 lg:w-48 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
 
             <div className="overflow-hidden">
-              <div className="carousel-track flex gap-20 sm:gap-24 lg:gap-28 w-max">
+              <div className="carousel-track flex gap-20 sm:gap-24 lg:gap-28 w-max items-center">
                 {[...sponsors, ...sponsors].map((s, idx) => (
                   <SponsorLogo
                     key={`${s.name}-${idx}`}
                     name={s.name}
                     logo={s.logo}
-                    size="md"
+                    size={s.size} // Uses individual sponsor size or defaults to 'md'
                   />
                 ))}
               </div>
