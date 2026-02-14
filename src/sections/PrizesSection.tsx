@@ -53,7 +53,7 @@ const tickPrizes = [
 
 export default function PrizesSection() {
   return (
-    <section id="prizes" className="relative py-12 sm:py-32 bg-black overflow-hidden">
+    <section id="prizes" className="font-display relative py-12 sm:py-32 bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[150px]" />

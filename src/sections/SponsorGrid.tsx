@@ -58,7 +58,7 @@ export default function SponsorsGrid() {
   };
 
   return (
-    <section id="sponsors" className="relative py-20 sm:py-32 bg-black overflow-hidden">
+    <section id="sponsors" className="font-display relative py-12 sm:py-32 bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-[150px]" />
