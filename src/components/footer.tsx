@@ -54,7 +54,7 @@ export default function FooterSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 lg:py-32">
         {/* Top Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-16 px-6">
           {/* Brand Column */}
           <div className="space-y-6">
             <Link
@@ -96,51 +96,7 @@ export default function FooterSection() {
           </div>
 
           {/* Links Columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-4 tracking-wider uppercase">
-                Event
-              </h3>
-              <ul className="space-y-3">
-                {links.slice(0, 3).map((link) => (
-                  <li key={link.title}>
-                    <Link
-                      href={link.href}
-                      className="text-neutral-400 hover:text-white transition-colors duration-200 text-sm inline-block hover:translate-x-1 transform"
-                    >
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-4 tracking-wider uppercase">
-                Resources
-              </h3>
-              <ul className="space-y-3">
-                {links.slice(3).map((link) => (
-                  <li key={link.title}>
-                    <Link
-                      href={link.href}
-                      className="text-neutral-400 hover:text-white transition-colors duration-200 text-sm inline-block hover:translate-x-1 transform"
-                    >
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link
-                    href="#"
-                    className="text-neutral-400 hover:text-white transition-colors duration-200 text-sm inline-block hover:translate-x-1 transform"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
+          <div className="flex justify-end">
             <div>
               <h3 className="text-sm font-semibold text-white mb-4 tracking-wider uppercase">
                 Contact
