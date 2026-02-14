@@ -73,7 +73,7 @@ export default function PrizesSection() {
             Prizes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Rewards</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-            Compete for incredible prizes worth over ₹1,00,000 in cash, credits, and exclusive perks
+            Compete for incredible prizes worth over ₹30000 in cash, credits, and exclusive perks
           </p>
         </motion.div>
 
