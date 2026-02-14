@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -67,11 +66,11 @@ export default function SponsorsSection() {
     };
 
     return (
-      <div className={`sponsor-logo ${sizeClasses[size]} flex items-center justify-center`}>
+      <div className={`sponsor-logo ${sizeClasses[size]} flex items-center justify-center shrink-0`}>
         <img
           src={logo}
           alt={name}
-          className="max-w-full max-h-full object-contain"
+          className="max-w-full max-h-full object-contain transition-all duration-300"
           loading="lazy"
         />
       </div>
@@ -81,7 +80,7 @@ export default function SponsorsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black overflow-hidden"
+      className="relative bg-black overflow-hidden py-16 sm:py-20 lg:py-24"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -92,7 +91,7 @@ export default function SponsorsSection() {
         <div className="max-w-5xl mx-auto">
           <h2
             ref={headingRef}
-            className="font-display text-2xl font-bold text-white text-center"
+            className="font-display text-2xl font-bold text-white text-center mb-12 sm:mb-16"
             style={{ opacity: 0 }}
           >
             <span className="text-neutral-200">Chaos Powered By</span>
@@ -100,17 +99,25 @@ export default function SponsorsSection() {
 
           <div
             ref={sponsorsRef}
-            className="relative overflow-hidden"
+            className="relative"
           >
-            <div className="carousel-track flex gap-20 sm:gap-24 lg:gap-28 w-max">
-              {[...sponsors, ...sponsors].map((s, idx) => (
-                <SponsorLogo
-                  key={`${s.name}-${idx}`}
-                  name={s.name}
-                  logo={s.logo}
-                  size="md"
-                />
-              ))}
+            {/* Left Fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 lg:w-48 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
+            
+            {/* Right Fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 lg:w-48 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
+
+            <div className="overflow-hidden">
+              <div className="carousel-track flex gap-20 sm:gap-24 lg:gap-28 w-max">
+                {[...sponsors, ...sponsors].map((s, idx) => (
+                  <SponsorLogo
+                    key={`${s.name}-${idx}`}
+                    name={s.name}
+                    logo={s.logo}
+                    size="md"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
