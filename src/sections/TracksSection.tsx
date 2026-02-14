@@ -222,13 +222,13 @@ export default function TracksSection() {
                         </h3>
 
                         {/* Description */}
-                        <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
+                        <p className="text-white/50 text-sm sm:text-base cursor-pointer leading-relaxed mb-5 sm:mb-6">
                           {track.description}
                         </p>
 
                         {/* CTA */}
                         <div className="flex items-center gap-2 text-white/40 group-hover:text-purple-400 transition-colors">
-                          <span className="font-mono text-xs sm:text-sm">Click to learn more →</span>
+                          <span className="font-mono text-xs cursor-pointer sm:text-sm">Click to learn more</span>
                         </div>
                       </div>
                     </div>
