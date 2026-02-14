@@ -23,7 +23,7 @@ const tracks = [
   {
     icon: "/track/api.ico",
     title: 'API Market',
-    description: 'Build your backends faster with backternity. Participants have to use backternity in order to build their backends',
+    description: 'Best Business Ready Project Track. Build real world solutions using APIs that can be launched, monetized, and scaled for actual business use.',
     color1: 'from-purple-600 to-purple-400',
     color: 'from-neutral-900 to-neutral-600',
     gradient: 'rgba(147, 51, 234, 0.2)',
