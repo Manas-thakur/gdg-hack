@@ -32,6 +32,11 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <nav
@@ -42,14 +47,18 @@ export default function Navigation() {
         }`}
       >
         <div className="w-full px-6 lg:px-12 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex">
-            <span className="text-xl font-mono">Code</span>
-            <p className="text-xl bg-neutral-200 text-black px-2 rounded-full">
+          {/* Logo - Now scrolls to top */}
+          <button 
+            onClick={scrollToTop}
+            className="flex items-center group cursor-pointer"
+            aria-label="Go to top"
+          >
+            <span className="text-xl font-mono text-white group-hover:text-purple-400 transition-colors duration-300">Code</span>
+            <span className="text-xl bg-neutral-200 text-black px-2 rounded-full mx-0.5 group-hover:bg-white transition-colors duration-300">
               &
-            </p>
-            <span className="text-xl font-mono">Chaos</span>
-          </div>
+            </span>
+            <span className="text-xl font-mono text-white group-hover:text-blue-400 transition-colors duration-300">Chaos</span>
+          </button>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -57,7 +66,7 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm text-white/60 hover:text-white transition-colors duration-300"
+                className="text-sm text-white/60 hover:text-white transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.label}
               </button>
@@ -67,7 +76,7 @@ export default function Navigation() {
                 className="group font-display px-3 sm:px-4 py-1 sm:py-3 bg-gradient-to-r from-neutral-950 to-neutral-900 text-neutral-199 rounded-xl flex flex-row items-center justify-center gap-2 sm:gap-3 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
                 strength={0.0}
               >
-                <Link className="text-sm" href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge">Register Now</Link>
+                <Link className="text-sm" href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge ">Register Now</Link>
               </MagneticButton>
             </div>
           </div>
@@ -75,7 +84,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -96,7 +105,7 @@ export default function Navigation() {
               </button>
             ))}
             <Link
-              href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge"
+              href="https://unstop.com/o/X0apVxI?lb=3TzKDrEI&utm_medium=Share&utm_source=vaibhjam4168&utm_campaign=Online_coding_challenge "
               className="mt-4 px-8 py-3 bg-gradient-to-r from-purple-600 to-red-600 text-white text-lg font-medium rounded-lg"
             >
               Register Now
