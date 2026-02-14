@@ -34,7 +34,7 @@ const mainPrizes = [
 
 const tickPrizes = [
   {
-    title: "Best Library Usage",
+    title: "Bacternity",
     description: "Most effecient way of using backternity library",
     prize: "Rs 2,000",
     icon: Star,
@@ -42,7 +42,7 @@ const tickPrizes = [
     sponsor: "Sponsored by Backternity",
   },
   {
-    title: "Most Innovative",
+    title: "API Market",
     description: "Best business ready project",
     prize: "Rs 10,000",
     icon: Zap,
@@ -53,7 +53,7 @@ const tickPrizes = [
 
 export default function PrizesSection() {
   return (
-    <section id="prizes" className="relative py-20 sm:py-32 bg-black overflow-hidden">
+    <section id="prizes" className="relative py-12 sm:py-32 bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[150px]" />
@@ -73,7 +73,7 @@ export default function PrizesSection() {
             Prizes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Rewards</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-            Compete for incredible prizes worth over ₹30000 in cash, credits, and exclusive perks
+            Compete for incredible prizes worth over Rs 30000 in cash.
           </p>
         </motion.div>
 
@@ -94,7 +94,6 @@ export default function PrizesSection() {
                 
                 {/* Rank Badge */}
                 <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r ${prize.color} text-white text-sm font-bold mb-6`}>
-                  <prize.icon size={16} />
                   {prize.rank} Place
                 </div>
 
@@ -103,19 +102,6 @@ export default function PrizesSection() {
                   {prize.prize}
                 </div>
                 <div className="text-lg text-neutral-400 mb-6">{prize.title}</div>
-
-                {/* Perks */}
-                <ul className="space-y-3">
-                  {prize.perks.map((perk, i) => (
-                    <li key={i} className="flex items-center gap-3 text-neutral-300 text-sm">
-                      <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${prize.color}`} />
-                      {perk}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Decorative Icon */}
-                <prize.icon className="absolute bottom-4 right-4 w-24 h-24 text-white/5 group-hover:text-white/10 transition-colors duration-500" />
               </div>
             </motion.div>
           ))}
@@ -130,11 +116,7 @@ export default function PrizesSection() {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-8">
-            <Ticket className="w-6 h-6 text-purple-400" />
-            <h3 className="text-2xl font-bold text-white">Track Prizes</h3>
-            <span className="px-3 py-1 text-xs font-medium text-purple-300 bg-purple-500/10 rounded-full border border-purple-500/20">
-              Special Categories
-            </span>
+            <h1 className="text-2xl font-bold text-white">Track Prizes</h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,28 +130,16 @@ export default function PrizesSection() {
                 className="group relative"
               >
                 <div className="relative p-6 rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 hover:border-purple-500/30 transition-all duration-500">
-                  {/* Glow Effect */}
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${prize.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-2xl`} />
-                  
-                  <div className="relative flex items-start gap-4">
-                    {/* Icon Box */}
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${prize.color} shrink-0`}>
-                      <prize.icon className="w-6 h-6 text-white" />
-                    </div>
-
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h4 className="text-lg font-bold text-white">{prize.title}</h4>
-                        <Gift className="w-4 h-4 text-purple-400" />
+                  <div className="relative flex gap-4">
+                    <div className="flex-1 items-center justify-center">
+                      <div className="flex items-center justify-center gap-2 mb-1">
+                        <h4 className="text-lg font-bold text-center text-white">{prize.title}</h4>
                       </div>
-                      <p className="text-neutral-400 text-sm mb-3">{prize.description}</p>
+                      <p className="text-neutral-400 text-center text-sm mb-3">{prize.description}</p>
                       
-                      <div className="flex items-center justify-between">
-                        <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
+                      <div className="flex items-center justify-center">
+                        <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
                           {prize.prize}
-                        </span>
-                        <span className="text-xs text-neutral-500 italic">
-                          {prize.sponsor}
                         </span>
                       </div>
                     </div>
@@ -178,19 +148,6 @@ export default function PrizesSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        {/* Bottom Note */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12 p-6"
-        >
-          <p className="text-neutral-400">
-            All participants will receive certificates and exclusive perks from our sponsors
-          </p>
         </motion.div>
       </div>
     </section>
