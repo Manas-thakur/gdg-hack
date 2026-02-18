@@ -43,8 +43,7 @@ const judges: Judge[] = [
     bio: "",
     day: 2,
     socials: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
+      linkedin: "https://www.linkedin.com/in/divya-sharma-1502"
     },
   },
   {
@@ -67,8 +66,8 @@ const judges: Judge[] = [
     bio: "",
     day: 2,
     socials: {
-      linkedin: "https://linkedin.com",
-      website: "https://aisha.dev",
+      linkedin: "https://www.linkedin.com/in/deepanshupant/",
+      website: "https://deepanshupant2002.github.io/My-Portfolio/",
     },
   },
 ];
