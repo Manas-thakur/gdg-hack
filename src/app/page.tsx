@@ -7,6 +7,7 @@ import HeroSection from '@/sections/HeroSection';
 import AboutSection from '@/sections/AboutSection';
 import TracksSection from '@/sections/TracksSection';
 import ScheduleSection from '@/sections/ScheduleSection';
+import JudgesSection from '@/sections/JudgeSection';
 import PrizesSection from '@/sections/PrizesSection';
 import SponsorsSection from '@/sections/SponsorsSection';
 import FAQSection from '@/sections/FAQSection';
@@ -38,6 +39,7 @@ export default function Home() {
         <AboutSection />
         <TracksSection />
         <SponsorTracksSection />
+        <JudgesSection />
         <ScheduleSection />
         <SponsorsGrid />
         <PrizesSection />
