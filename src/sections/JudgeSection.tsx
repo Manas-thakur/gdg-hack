@@ -21,10 +21,10 @@ interface Judge {
 const judges: Judge[] = [
   // Day 1 Judges
   {
-    name: "Yet to be disclosed",
-    role: "",
-    company: "",
-    image: "/judges/coming.avif",
+    name: "Sandhya Yadav",
+    role: "SDE-1",
+    company: "American Express",
+    image: "/judges/sandhiya.jpeg",
     bio: "",
     day: 1,
     socials: {
@@ -33,6 +33,59 @@ const judges: Judge[] = [
       website: ""
     },
   },
+  {
+    name: "Vinayak Saubhri",
+    role: "React native Developer",
+    company: "Jumbo",
+    image: "/judges/nalayak.jpeg",
+    bio: "",
+    day: 1,
+    socials: {
+      linkedin: "",
+      twitter: "",
+      website: ""
+    },
+  },
+  {
+    name: "Pravneet Singh",
+    role: "Data & AI associate",
+    company: "",
+    image: "/judges/par.jpeg",
+    bio: "",
+    day: 1,
+    socials: {
+      linkedin: "",
+      twitter: "",
+      website: ""
+    },
+  },
+  {
+    name: "Anmol",
+    role: "Senior Associate",
+    company: "Air India",
+    image: "/judges/annu.jpg",
+    bio: "",
+    day: 1,
+    socials: {
+      linkedin: "",
+      twitter: "",
+      website: ""
+    },
+  },
+  {
+    name: "Harshita Abrol",
+    role: "Specialist Implementation Services",
+    company: "Aptia",
+    image: "/judges/harshita.jpeg",
+    bio: "",
+    day: 1,
+    socials: {
+      linkedin: "",
+      twitter: "",
+      website: ""
+    },
+  },
+
 
   // Day 2 Judges
   {
