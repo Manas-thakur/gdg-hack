@@ -64,18 +64,6 @@ const data = [
   },
   {
     date : "FEB 20",
-    time : "3:00 PM - 4:00 PM",
-    content : (
-      <div>
-          <h1 className='text-4xl font-display font-semibold'>Lunch Break</h1>
-          <p className="mb-8 text-xl text-neutral-400 dark:text-neutral-200 py-2">
-            All 15 teams will be given lunch by the organizers
-          </p>
-        </div>
-    )
-  },
-  {
-    date : "FEB 20",
     time : "4:00 PM - 6:00 PM",
     content : (
       <div>
